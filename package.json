@@ -1,0 +1,28 @@
+{
+  "name": "core-elements",
+  "version": "1.0.0",
+  "description": "Elements is the component library of the Core design system.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthane-git/core-elements.git"
+  },
+  "author": "BlazeIsClone",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/anthane-git/core-elements/issues"
+  },
+  "homepage": "https://github.com/anthane-git/core-elements#readme",
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {}
+}
