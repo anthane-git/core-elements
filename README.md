@@ -25,6 +25,14 @@ npm start
 
 <br>
 
+Run Unit Tests.
+
+```bash
+npm run test
+```
+
+<br>
+
 Build NPM distributable package.
 
 ```bash
