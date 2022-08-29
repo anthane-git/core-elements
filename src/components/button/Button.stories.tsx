@@ -5,6 +5,11 @@ import { ButtonProps } from './Button.interface';
 export default {
 	title: 'Button',
 	component: Button,
+	parameters: {
+		docs: {
+			page: null,
+		},
+	},
 };
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;

@@ -1,34 +1,44 @@
-import { babel } from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
+import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
+import filesize from 'rollup-plugin-filesize';
 import { terser } from 'rollup-plugin-terser';
-import scss from 'rollup-plugin-scss';
+import multiInput from 'rollup-plugin-multi-input';
+import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
 
 export default [
 	{
-		input: './src/index.ts',
+		input: [
+			'src/components/**/*.tsx',
+			'src/components/**/index.ts',
+			'!src/components/**/*.test.tsx',
+			'!src/components/**/*.stories.tsx',
+		],
 		output: [
 			{
-				file: 'dist/index.es.js',
+				dir: 'dist',
 				format: 'es',
 				exports: 'named',
+				sourcemap: true,
 			},
 		],
 		plugins: [
-			scss({
-				output: false,
-				failOnError: true,
-				outputStyle: 'compressed',
-			}),
-			babel({
-				exclude: 'node_modules/**',
-				presets: ['@babel/preset-react'],
+			multiInput({
+				relative: 'src/components',
 			}),
 			external(),
 			resolve(),
+			commonjs(),
+			postcss({
+				modules: true,
+				plugins: [autoprefixer(), cssnano()],
+			}),
 			typescript(),
 			terser(),
+			filesize(),
 		],
 	},
 ];

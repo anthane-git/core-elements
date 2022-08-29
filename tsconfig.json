@@ -4,6 +4,7 @@
 		"jsx": "react-jsx",
 		"module": "ES6",
 		"moduleResolution": "node",
+		"sourceMap": true,
 		"baseUrl": "./src",
 		"outDir": "./dist",
 		"removeComments": false,
@@ -15,5 +16,6 @@
 		"paths": {
 			"*": ["./utils/*"]
 		}
-	}
+	},
+	"include": ["src/**/*"]
 }
