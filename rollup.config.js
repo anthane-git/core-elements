@@ -3,9 +3,9 @@ import typescript from '@rollup/plugin-typescript';
 import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import filesize from 'rollup-plugin-filesize';
-import { terser } from 'rollup-plugin-terser';
 import multiInput from 'rollup-plugin-multi-input';
 import postcss from 'rollup-plugin-postcss';
+import { terser } from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 

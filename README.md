@@ -9,6 +9,12 @@
 
 This project is bootstraped with Storybook which is a open source tool for building UI components in isolation. It streamlines UI development, testing, and documentation. The build pipeline uses Rollup module bundler for JavaScript/Typescript which compiles all components of code into a single efficient library.
 
+## Usage
+
+```bash
+npm install anthane-core-elements
+```
+
 ## Commands
 
 Run storybook.
