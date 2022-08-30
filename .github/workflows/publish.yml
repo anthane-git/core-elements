@@ -13,6 +13,8 @@ jobs:
           node-version: 16.17.0
       - run: npm ci
       - run: npm test
+      - run: VERSION=$(node -p "require('./package.json').version")
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          tag: ${VERSION}
