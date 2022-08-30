@@ -8,7 +8,7 @@ module.exports = {
 		'@storybook/addon-interactions',
 	],
 	framework: '@storybook/react',
-	webpackFinal: async (config, { configType }) => {
+	webpackFinal: async (config: any) => {
 		config.module.rules.push({
 			test: /\.scss$/,
 			use: ['style-loader', 'css-loader', 'sass-loader'],

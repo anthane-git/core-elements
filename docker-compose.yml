@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  storybook:
+    image: storybook
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ce-storybook
+    restart: always
+    ports:
+      - 8000:3000
+    volumes:
+      - ./:/app
+    stdin_open: true
+    tty: true
