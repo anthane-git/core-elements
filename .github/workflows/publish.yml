@@ -16,5 +16,6 @@ jobs:
       - run: echo "VERSION=$(node -p 'require('./package.json').version')" >> $GITHUB_ENV
       - uses: JS-DevTools/npm-publish@v1
         with:
+          greater-version-only: true
           token: ${{ secrets.NPM_TOKEN }}
           tag: echo ${{ env.VERSION }}
