@@ -8,8 +8,7 @@ describe('Test Component', () => {
 
 	beforeEach(() => {
 		props = {
-			children: <div>test</div>,
-			variant: 'primary',
+			label: 'button',
 		};
 	});
 
