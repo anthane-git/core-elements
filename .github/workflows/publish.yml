@@ -23,6 +23,6 @@ jobs:
       - if: steps.publish.outputs.type != 'none'
         run: |
           echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
-      - if: steps.publish.outputs.type = 'none'
+      - if: steps.publish.outputs.type == 'none'
         run: |
           echo '::warning:: current package tag already published to registry.'
