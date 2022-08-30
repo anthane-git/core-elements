@@ -25,6 +25,14 @@ npm start
 
 <br>
 
+Export storybook into static files.
+
+```bash
+npm run build:storybook
+```
+
+<br>
+
 Run Unit Tests.
 
 ```bash
