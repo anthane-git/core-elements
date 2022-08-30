@@ -1,16 +1,22 @@
-import { ReactNode } from 'react';
 import { ButtonProps } from './Button.interface';
 import styles from './Button.module.scss';
 
-export const Button: React.FC<ButtonProps> = ({
-	children,
+export const Button = ({
+	primary = false,
+	size = 'medium',
+	backgroundColor,
+	label,
 	...props
-}: {
-	children: ReactNode;
-}) => {
+}: ButtonProps) => {
+	const mode = primary ? styles.primary : styles.secondary;
 	return (
-		<button className={styles.button} {...props}>
-			{children}
+		<button
+			type="button"
+			className={`${styles.button} ${styles[size]} ${mode}`}
+			style={{ backgroundColor }}
+			{...props}
+		>
+			{label}
 		</button>
 	);
 };

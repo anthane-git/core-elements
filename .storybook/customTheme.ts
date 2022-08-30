@@ -32,9 +32,8 @@ export default create({
 	inputBorderRadius: 4,
 
 	brandTitle: 'Anthane Core Elements',
-	brandUrl: 'https://example.com',
+	brandUrl: '#',
 	brandImage:
 		'https://github.com/anthane-git/core-assets/blob/main/logotype/v1.0.png?raw=true',
-
 	brandTarget: '_self',
 });

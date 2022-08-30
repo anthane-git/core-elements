@@ -1,30 +1,40 @@
-import { Story } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { Button } from './Button';
-import { ButtonProps } from './Button.interface';
 
+// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Button',
+	title: 'Atoms/Button',
 	component: Button,
-	parameters: {
-		docs: {
-			page: null,
-		},
+	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+	argTypes: {
+		backgroundColor: { control: 'color' },
 	},
-};
+} as ComponentMeta<typeof Button>;
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
-
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-	children: 'Primary',
-	variant: 'primary',
+	primary: true,
+	label: 'Button',
 };
 
-export const Danger = Template.bind({});
+export const Secondary = Template.bind({});
+Secondary.args = {
+	label: 'Button',
+};
 
-Danger.args = {
-	children: 'Danger',
-	variant: 'danger',
-	shape: 'rounded',
+export const Large = Template.bind({});
+Large.args = {
+	size: 'large',
+	label: 'Button',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+	size: 'small',
+	label: 'Button',
 };
