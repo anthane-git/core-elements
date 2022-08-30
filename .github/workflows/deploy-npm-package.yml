@@ -9,23 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Set up Node 🛑
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
 
       - name: Install dependencies 📦
-      - run: npm ci
+        run: npm ci
 
       - name: Run Tests 🧪
-      - run: npm test
+        run: npm test
 
       - name: Publish to NPM registry 🚀
-      - run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
-      - id: publish
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+        id: publish
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
