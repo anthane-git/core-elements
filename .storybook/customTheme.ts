@@ -33,7 +33,6 @@ export default create({
 
 	brandTitle: 'Anthane Core Elements',
 	brandUrl: '#',
-	brandImage:
-		'https://github.com/anthane-git/core-assets/blob/main/logotype/v1.0.png?raw=true',
+	brandImage: 'https://nx.dev/documentation/shared/storybook-logo.png',
 	brandTarget: '_self',
 });

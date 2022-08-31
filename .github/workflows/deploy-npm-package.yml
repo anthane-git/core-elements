@@ -33,6 +33,7 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           tag: echo ${{ env.VERSION }}
+          access: public
           check-version: true
       - if: steps.publish.outputs.type != 'none'
         run: |
