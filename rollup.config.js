@@ -9,6 +9,7 @@ import { terser } from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 
+/** @type {import('rollup').RollupOptions} */
 export default [
 	{
 		input: [
@@ -17,6 +18,7 @@ export default [
 			'!src/components/**/*.test.tsx',
 			'!src/components/**/*.stories.tsx',
 		],
+
 		output: [
 			{
 				dir: 'dist',
