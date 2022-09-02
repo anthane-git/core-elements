@@ -18,7 +18,6 @@ export default [
 			'!src/components/**/*.test.tsx',
 			'!src/components/**/*.stories.tsx',
 		],
-
 		output: [
 			{
 				dir: 'dist',

@@ -1,12 +1,12 @@
 {
 	"name": "@anthane/core-elements",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Elements is the component library of the Core design system.",
-	"module": "dist/index.esm.js",
 	"publishConfig": {
 		"access": "public",
 		"@anthane:registry": "https://registry.npmjs.org/"
 	},
+	"module": "dist/index.js",
 	"files": [
 		"dist"
 	],
