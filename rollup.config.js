@@ -1,9 +1,8 @@
-import resolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import filesize from 'rollup-plugin-filesize';
-import multiInput from 'rollup-plugin-multi-input';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
@@ -12,30 +11,24 @@ import cssnano from 'cssnano';
 /** @type {import('rollup').RollupOptions} */
 export default [
 	{
-		input: [
-			'src/components/**/*.tsx',
-			'src/components/**/index.ts',
-			'!src/components/**/*.test.tsx',
-			'!src/components/**/*.stories.tsx',
-		],
+		input: ['src/index.ts'],
 		output: [
 			{
 				dir: 'dist',
 				format: 'es',
 				exports: 'named',
 				sourcemap: true,
+				preserveModules: true,
 			},
 		],
 		plugins: [
-			multiInput({
-				relative: 'src/components',
-			}),
 			external(),
-			resolve(),
+			nodeResolve(),
 			commonjs(),
 			postcss({
-				modules: true,
 				plugins: [autoprefixer(), cssnano()],
+				modules: true,
+				inject: false,
 			}),
 			typescript(),
 			terser(),
