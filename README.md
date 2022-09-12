@@ -7,7 +7,7 @@
 [![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)](https://sass-lang.com/)
 [![Rollup](https://img.shields.io/badge/Rollup-ef3335?style=for-the-badge&logo=rollup.js&logoColor=white)](https://rollupjs.org/)
 
-This project is bootstraped with Storybook which is a open source tool for building UI components in isolation. It streamlines UI development, testing, and documentation. The build pipeline uses Rollup module bundler for JavaScript/Typescript which compiles all components of code into a single efficient library.
+Core Elements is a component library designed to help developers create the best experience for people who use Anthane.
 
 ## Usage
 
