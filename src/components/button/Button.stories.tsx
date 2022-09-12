@@ -10,6 +10,10 @@ export default {
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
+	parameters: {
+		zeplinLink:
+			'zpl://components?stid=631e870a0c193114d5980cab&coid=631e8a6d573423133e0d541f',
+	},
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

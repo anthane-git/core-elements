@@ -9,6 +9,6 @@ export const parameters = {
 		},
 	},
 	docs: {
-		theme: themes.light,
+		theme: themes.dark,
 	},
 };

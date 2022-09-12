@@ -1,15 +1,15 @@
 import { create } from '@storybook/theming';
 
 export default create({
-	base: 'light',
+	base: 'dark',
 
-	colorPrimary: 'hotpink',
-	colorSecondary: 'deepskyblue',
+	colorPrimary: '#7938B2',
+	colorSecondary: '#7938B2',
 
 	// UI
-	appBg: '#F9F9F9',
-	appContentBg: '#F9F9F9',
-	appBorderColor: 'white',
+	appBg: '#1B141D',
+	appContentBg: '#1C1C1F',
+	appBorderColor: '#28282C',
 	appBorderRadius: 4,
 
 	// Typography
@@ -17,22 +17,22 @@ export default create({
 	fontCode: 'monospace',
 
 	// Text colors
-	textColor: 'black',
-	textInverseColor: 'rgba(255,255,255,0.9)',
+	textColor: '#A09FA6',
+	textInverseColor: 'black',
 
 	// Toolbar default and active colors
-	barTextColor: 'white',
-	barSelectedColor: 'white',
-	barBg: '#16213E',
+	barTextColor: '#BF7AF0',
+	barSelectedColor: '#BF7AF0',
+	barBg: '#28282C',
 
 	// Form colors
-	inputBg: 'white',
-	inputBorder: 'silver',
-	inputTextColor: 'black',
+	inputBg: '#3E3E44',
+	inputBorder: '#432155',
+	inputTextColor: '#F8F1FD',
 	inputBorderRadius: 4,
 
 	brandTitle: 'Anthane Core Elements',
 	brandUrl: '#',
-	brandImage: 'https://nx.dev/documentation/shared/storybook-logo.png',
+	brandImage: 'https://astro.build/assets/press/full-logo-dark.png',
 	brandTarget: '_self',
 });
