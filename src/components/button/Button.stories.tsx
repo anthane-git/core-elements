@@ -5,7 +5,10 @@ import { Button } from './Button';
 export default {
 	title: 'Atoms/Button',
 	component: Button,
-	parameters: {},
+	parameters: {
+		zeplinLink:
+			'zpl://components?pid=63314bec5c936a148ce98762&cseid=63314c33face09148172f2b8',
+	},
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
