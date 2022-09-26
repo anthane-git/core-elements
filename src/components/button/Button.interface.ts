@@ -1,22 +1,18 @@
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 	/**
-	 * Is this the principal call to action on the page?
+	 * Make the button the as the primary call to action
 	 */
 	primary?: boolean;
 	/**
-	 * What background color to use
+	 * Size of the button
 	 */
-	backgroundColor?: string;
-	/**
-	 * How large should the button be?
-	 */
-	size?: 'small' | 'medium' | 'large';
+	size?: 'medium' | 'large';
 	/**
 	 * Button contents
 	 */
 	label: string;
 	/**
-	 * Optional click handler
+	 * onClick handler
 	 */
 	onClick?: () => void;
 }

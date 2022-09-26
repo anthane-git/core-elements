@@ -32,7 +32,7 @@ export default create({
 	inputBorderRadius: 4,
 
 	brandTitle: 'Anthane Core Elements',
-	brandUrl: '#',
+	brandUrl: '/',
 	brandImage: 'https://astro.build/assets/press/full-logo-dark.png',
 	brandTarget: '_self',
 });

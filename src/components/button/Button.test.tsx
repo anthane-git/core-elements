@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { Button } from './Button';
 import { ButtonProps } from './Button.interface';
 
-describe('Test Component', () => {
+describe('Test Button', () => {
 	let props: ButtonProps;
 
 	beforeEach(() => {

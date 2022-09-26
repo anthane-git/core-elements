@@ -4,7 +4,6 @@ import styles from './Button.module.scss';
 export const Button = ({
 	primary = false,
 	size = 'medium',
-	backgroundColor,
 	label,
 	...props
 }: ButtonProps) => {
@@ -13,7 +12,6 @@ export const Button = ({
 		<button
 			type="button"
 			className={`${styles.button} ${styles[size]} ${mode}`}
-			style={{ backgroundColor }}
 			{...props}
 		>
 			{label}
