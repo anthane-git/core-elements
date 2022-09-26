@@ -1,4 +1,4 @@
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface Props extends React.HTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Make the button the as the primary call to action
 	 */

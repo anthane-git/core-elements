@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
 import { Button } from './Button';
-import { ButtonProps } from './Button.interface';
+import { Props } from './Button.interface';
 
 describe('Test Button', () => {
-	let props: ButtonProps;
+	let props: Props;
 
 	beforeEach(() => {
 		props = {

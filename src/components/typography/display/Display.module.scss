@@ -1,0 +1,27 @@
+@import '@anthane/core-tokens/dist/scss/index';
+
+.display {
+	&.XXLarge {
+		font-size: 96px;
+	}
+
+	&.XLarge {
+		font-size: 86px;
+	}
+
+	&.Large {
+		font-size: 76px;
+	}
+
+	&.Medium {
+		font-size: 66px;
+	}
+
+	&.Small {
+		font-size: 56px;
+	}
+
+	&.XSmall {
+		font-size: 46px;
+	}
+}

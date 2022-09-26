@@ -1,4 +1,4 @@
-import { ButtonProps } from './Button.interface';
+import { Props } from './Button.interface';
 import styles from './Button.module.scss';
 
 export const Button = ({
@@ -6,7 +6,7 @@ export const Button = ({
 	size = 'medium',
 	label,
 	...props
-}: ButtonProps) => {
+}: Props) => {
 	const mode = primary ? styles.primary : styles.secondary;
 	return (
 		<button
