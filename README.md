@@ -12,7 +12,13 @@ Core Elements is a component library designed to help developers create the best
 ## Usage
 
 ```bash
-npm install anthane-core-elements
+npm install @anthane/core-elements
+```
+
+## Peer Dependencies (required)
+
+```bash
+npm install @anthane/core-tokens
 ```
 
 ## Commands
