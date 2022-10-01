@@ -2,16 +2,15 @@ import { Props } from './Button.interface';
 import styles from './Button.module.scss';
 
 export const Button = ({
-	primary = false,
-	size = 'medium',
+	type,
+	variant = 'primary',
 	label,
 	...props
 }: Props) => {
-	const mode = primary ? styles.primary : styles.secondary;
 	return (
 		<button
 			type="button"
-			className={`${styles.button} ${styles[size]} ${mode}`}
+			className={`${styles.button} ${styles[type]} ${styles[variant]}`}
 			{...props}
 		>
 			{label}

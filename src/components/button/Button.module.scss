@@ -1,32 +1,47 @@
-@import '@anthane/core-tokens/dist/scss/index';
+@use '@anthane/core-tokens/dist/scss/index' as *;
 
 .button {
-	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	@include core-text-button;
 	border: 0;
 	border-radius: 3em;
 	cursor: pointer;
 	display: inline-block;
-	line-height: 1;
 
-	&.primary {
-		color: white;
-		background: $core-action-primary-default;
+	width: 95px;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 20px;
+	border-radius: 4px;
+
+	&.contained {
+		color: var(--core-color-text-default);
+		background: var(--core-color-action-primary-default);
 	}
 
-	&.secondary {
-		color: #333;
-		background-color: white;
+	&.outlined {
+		color: var(--core-color-text-default);
+		background: var(--core-color-action-secondary-default);
 		box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 	}
 
-	&.medium {
-		font-size: 14px;
+	&.icon {
 		padding: 11px 20px;
 	}
 
-	&.large {
-		font-size: 16px;
+	&.text {
 		padding: 12px 24px;
+	}
+
+	&.primary {
+		background-color: var(--core-color-action-primary-default);
+		color: var(--core-color-action-on-primary);
+	}
+
+	&.secondary {
+		background-color: var(--core-color-action-secondary-default);
+		color: var(--core-color-action-on-secondary);
 	}
 }

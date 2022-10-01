@@ -8,6 +8,7 @@ describe('Test Button', () => {
 
 	beforeEach(() => {
 		props = {
+			type: 'contained',
 			label: 'button',
 		};
 	});

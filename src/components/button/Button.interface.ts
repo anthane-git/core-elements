@@ -2,13 +2,13 @@ import { HTMLAttributes } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
 	/**
-	 * Make the button the as the primary call to action
+	 * Button form type
 	 */
-	primary?: boolean;
+	type: 'contained' | 'outlined' | 'icon' | 'text';
 	/**
-	 * Size of the button
+	 * Button style variant
 	 */
-	size?: 'medium' | 'large';
+	variant?: 'primary' | 'secondary';
 	/**
 	 * Button contents
 	 */

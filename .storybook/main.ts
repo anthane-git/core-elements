@@ -7,6 +7,7 @@ export default {
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
 		'storybook-zeplin/register',
+		'storybook-addon-css-user-preferences',
 	],
 	framework: '@storybook/react',
 	webpackFinal: async (config: any) => {

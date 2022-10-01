@@ -5,30 +5,26 @@ import { Button } from './Button';
 export default {
 	title: 'Atoms/Button',
 	component: Button,
-	parameters: {},
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-	label: 'Button',
-	primary: true,
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const Contained = Template.bind({});
+Contained.args = {
 	label: 'Button',
 };
 
-export const Medium = Template.bind({});
-Medium.args = {
+export const Outlined = Template.bind({});
+Outlined.args = {
 	label: 'Button',
-	size: 'medium',
 };
 
-export const Large = Template.bind({});
-Large.args = {
+export const Icon = Template.bind({});
+Icon.args = {
 	label: 'Button',
-	size: 'large',
+};
+
+export const Text = Template.bind({});
+Text.args = {
+	label: 'Button',
 };
