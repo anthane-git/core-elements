@@ -33,6 +33,7 @@ export default create({
 
 	brandTitle: 'Anthane Core Elements',
 	brandUrl: '/',
-	brandImage: 'https://astro.build/assets/press/full-logo-dark.png',
+	brandImage:
+		'https://github.com/anthane-git/core-assets/blob/main/logos/core/logotype-dark.png?raw=true',
 	brandTarget: '_self',
 });

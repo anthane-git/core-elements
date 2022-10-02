@@ -92,6 +92,19 @@
 		"tslib": "^2.4.0"
 	},
 	"dependencies": {
-		"@radix-ui/react-label": "^1.0.0"
+		"@radix-ui/react-label": "^1.0.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"prettier --write"
+		]
 	}
 }

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 
 import { Button } from './Button';
-import { Props } from './Button.interface';
+import { Props } from './Button.props';
 
 describe('Test Button', () => {
 	let props: Props;
