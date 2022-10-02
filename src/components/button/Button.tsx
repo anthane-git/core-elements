@@ -6,6 +6,7 @@ import styles from './Button.module.scss';
  */
 export const Button = ({
 
+
 	type,
 	variant = 'primary',
 	label,
