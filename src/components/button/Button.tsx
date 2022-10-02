@@ -5,6 +5,7 @@ import styles from './Button.module.scss';
  * button with variant combinations
  */
 export const Button = ({
+
 	type,
 	variant = 'primary',
 	label,
