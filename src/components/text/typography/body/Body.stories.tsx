@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Body } from './Body';
 
 export default {
-	title: 'Atoms/Typography',
+	title: 'Text/Typography',
 	component: Body,
 } as ComponentMeta<typeof Body>;
 

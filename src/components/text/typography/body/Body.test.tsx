@@ -7,7 +7,9 @@ describe('Test Body', () => {
 	let props: Props;
 
 	beforeEach(() => {
-		props = {};
+		props = {
+			className: 'typography',
+		};
 	});
 
 	const renderComponent = () => render(<Body {...props} />);

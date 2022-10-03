@@ -1,18 +1,19 @@
 import { render } from '@testing-library/react';
 
-import { Headline } from './Headline';
-import { Props } from './Headline.interface';
+import { Display } from './Display';
+import { Props } from './Display.interface';
 
-describe('Test Headline', () => {
+describe('Test Display', () => {
 	let props: Props;
 
 	beforeEach(() => {
 		props = {
+			className: 'typography',
 			size: 'Medium',
 		};
 	});
 
-	const renderComponent = () => render(<Headline {...props} />);
+	const renderComponent = () => render(<Display {...props} />);
 
 	it('should have button className', () => {
 		const { container } = renderComponent();

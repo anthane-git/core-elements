@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Overline } from './Overline';
 
 export default {
-	title: 'Atoms/Typography',
+	title: 'Text/Typography',
 	component: Overline,
 } as ComponentMeta<typeof Overline>;
 

@@ -1,2 +1,2 @@
-export * from './button';
-export * from './typography';
+export * from './controls';
+export * from './text';

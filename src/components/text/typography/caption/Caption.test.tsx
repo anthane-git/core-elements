@@ -1,16 +1,18 @@
 import { render } from '@testing-library/react';
 
-import { Overline } from './Overline';
-import { Props } from './Overline.interface';
+import { Caption } from './Caption';
+import { Props } from './Caption.interface';
 
-describe('Test Overline', () => {
+describe('Test Caption', () => {
 	let props: Props;
 
 	beforeEach(() => {
-		props = {};
+		props = {
+			className: 'typography',
+		};
 	});
 
-	const renderComponent = () => render(<Overline {...props} />);
+	const renderComponent = () => render(<Caption {...props} />);
 
 	it('should have button className', () => {
 		const { container } = renderComponent();

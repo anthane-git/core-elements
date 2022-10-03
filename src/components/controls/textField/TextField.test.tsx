@@ -8,7 +8,10 @@ describe('Test TextField', () => {
 
 	beforeEach(() => {
 		props = {
-			label: 'textField',
+			className: 'textField',
+			label: 'input',
+			type: 'text',
+			id: 'input-01',
 		};
 	});
 
