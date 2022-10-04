@@ -1,5 +1,1 @@
-export * from './display';
-export * from './headline';
-export * from './overline';
-export * from './caption';
-export * from './body';
+export { default as Typography } from './Typography';

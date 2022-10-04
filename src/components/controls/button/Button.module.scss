@@ -1,12 +1,12 @@
-@use '@anthane/core-tokens/dist/scss/index' as *;
+@use '~@anthane/core-tokens/dist/scss/index' as *;
 
 .button {
 	@include core-text-button;
+
 	border: 0;
 	border-radius: 3em;
 	cursor: pointer;
 	display: inline-block;
-
 	width: 95px;
 	height: 40px;
 	display: flex;
