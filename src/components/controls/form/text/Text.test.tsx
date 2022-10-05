@@ -8,7 +8,7 @@ describe('Test Text', () => {
 
 	beforeEach(() => {
 		props = {
-			className: 'Text',
+			className: 'text',
 		};
 	});
 

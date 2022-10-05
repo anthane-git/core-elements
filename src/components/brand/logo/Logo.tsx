@@ -6,7 +6,7 @@ import styles from './Logo.module.scss';
  */
 export const Logo = ({ ...props }: Props) => {
 	return (
-		<div className={`${styles}`} {...props}>
+		<div className={`${styles.logo}`} {...props}>
 			Logo
 		</div>
 	);
