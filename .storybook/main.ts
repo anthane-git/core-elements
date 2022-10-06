@@ -9,7 +9,6 @@ export default {
 		'storybook-zeplin/register',
 		'storybook-addon-css-user-preferences',
 	],
-	staticDirs: ['../public'],
 	framework: '@storybook/react',
 	webpackFinal: async (config: any) => {
 		config.module.rules.push({
