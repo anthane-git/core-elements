@@ -10,7 +10,6 @@ describe('Test Button', () => {
 		props = {
 			className: 'button',
 			type: 'contained',
-			label: 'button',
 		};
 	});
 
