@@ -14,7 +14,7 @@
 	],
 	"scripts": {
 		"start": "start-storybook -p 3100",
-		"prebuild": "./node_modules/rimraf/bin.js dist",
+		"prebuild": "./node_modules/rimraf/bin.js dist && mkdir dist && echo '*\n!.gitignore' > dist/.gitignore",
 		"build": "rollup -c",
 		"build:storybook": "build-storybook -o public",
 		"test": "jest",
