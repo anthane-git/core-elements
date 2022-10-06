@@ -21,6 +21,10 @@ npm install @anthane/core-elements
 npm install @anthane/core-tokens
 ```
 
+```bash
+npm install @anthane/core-fonts
+```
+
 ## Commands
 
 Run storybook.
