@@ -22,8 +22,7 @@ export const Button = ({
 			} ${icon && styles.icon}`}
 			{...props}
 		>
-			{icon && <figure>{icon}</figure>}
-			{children}
+			{icon ? <figure>{icon}</figure> : children}
 		</button>
 	);
 };
