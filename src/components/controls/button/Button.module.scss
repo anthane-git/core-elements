@@ -5,38 +5,49 @@
 	border: 0;
 	border-radius: 3em;
 	cursor: pointer;
-	display: inline-block;
-	width: 95px;
-	height: 40px;
 	padding: 8px 20px;
 	border-radius: 4px;
+	user-select: none;
 
 	&.contained {
 		color: var(--core-color-text-default);
 		background: var(--core-color-action-primary-default);
+
+		&:hover {
+			background: var(--core-color-action-primary-hovered);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 0.1rem var(--core-color-action-on-interactive);
+		}
+
+		&.primary {
+			background-color: var(--core-color-action-primary-default);
+		}
+
+		&.secondary {
+			background-color: var(--core-color-action-secondary-default);
+		}
 	}
 
 	&.outlined {
 		color: var(--core-color-text-default);
-		background: var(--core-color-action-secondary-default);
-		box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+		background: transparent;
+
+		&.primary {
+			outline: 2px solid var(--core-color-action-primary-default);
+		}
+
+		&.secondary {
+			outline: 2px solid var(--core-color-action-secondary-default);
+		}
 	}
 
 	&.icon {
-		padding: 11px 20px;
+		padding: 12px 20px;
 	}
 
 	&.text {
 		padding: 12px 24px;
-	}
-
-	&.primary {
-		background-color: var(--core-color-action-primary-default);
-		color: var(--core-color-action-on-primary);
-	}
-
-	&.secondary {
-		background-color: var(--core-color-action-secondary-default);
-		color: var(--core-color-action-on-secondary);
 	}
 }

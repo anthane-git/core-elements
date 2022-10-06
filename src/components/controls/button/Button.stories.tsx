@@ -11,20 +11,24 @@ const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const Contained = Template.bind({});
 Contained.args = {
-	label: 'Button',
+	children: 'Button',
+	type: 'contained',
 };
 
 export const Outlined = Template.bind({});
 Outlined.args = {
-	label: 'Button',
+	children: 'Button',
+	type: 'outlined',
 };
 
 export const Icon = Template.bind({});
 Icon.args = {
-	label: 'Button',
+	children: 'Button',
+	type: 'icon',
 };
 
 export const Text = Template.bind({});
 Text.args = {
-	label: 'Button',
+	children: 'Button',
+	type: 'text',
 };

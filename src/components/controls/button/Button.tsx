@@ -7,7 +7,7 @@ import styles from './Button.module.scss';
 export const Button = ({
 	type,
 	variant = 'primary',
-	label,
+	children,
 	...props
 }: Props) => {
 	return (
@@ -16,7 +16,7 @@ export const Button = ({
 			className={`${styles.button} ${styles[type]} ${styles[variant]}`}
 			{...props}
 		>
-			{label}
+			{children}
 		</button>
 	);
 };

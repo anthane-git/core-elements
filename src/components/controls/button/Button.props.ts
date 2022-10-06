@@ -14,7 +14,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Button label
 	 */
-	label: string;
+	children?: string;
 
 	/**
 	 * Disables the Button, preventing mouse events,
