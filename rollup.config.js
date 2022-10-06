@@ -9,31 +9,29 @@ import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 
 /** @type {import('rollup').RollupOptions} */
-export default [
-	{
-		input: ['src/index.ts'],
-		output: [
-			{
-				dir: 'dist',
-				format: 'es',
-				exports: 'named',
-				sourcemap: true,
-				preserveModules: true,
-			},
-		],
-		plugins: [
-			external(),
-			nodeResolve(),
-			commonjs(),
-			postcss({
-				plugins: [autoprefixer(), cssnano()],
-				modules: true,
-				inject: false,
-				extensions: ['.scss', '.css'],
-			}),
-			typescript({ exclude: ['**/*.stories.tsx', '**/*.test.tsx'] }),
-			terser(),
-			filesize(),
-		],
-	},
-];
+export default {
+	input: ['src/index.ts'],
+	output: [
+		{
+			dir: 'dist',
+			format: 'es',
+			exports: 'named',
+			sourcemap: true,
+		},
+	],
+	plugins: [
+		external(),
+		nodeResolve({
+			browser: true,
+		}),
+		commonjs(),
+		typescript({
+			exclude: ['**/*.stories.tsx', '**/*.test.tsx', '**/*.readme.md'],
+		}),
+		postcss({
+			plugins: [autoprefixer(), cssnano()],
+		}),
+		terser(),
+		filesize(),
+	],
+};
