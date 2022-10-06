@@ -13,4 +13,5 @@ export const ComponentDisplay = Story.bind({});
 ComponentDisplay.storyName = 'Display';
 ComponentDisplay.args = {
 	children: 'The quick brown fox jumps over the lazy dog',
+	size: 'Medium',
 };

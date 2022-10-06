@@ -2,17 +2,12 @@
 
 .button {
 	@include core-text-button;
-
 	border: 0;
 	border-radius: 3em;
 	cursor: pointer;
 	display: inline-block;
 	width: 95px;
 	height: 40px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
 	padding: 8px 20px;
 	border-radius: 4px;
 
