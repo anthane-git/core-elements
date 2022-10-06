@@ -2,7 +2,12 @@ import { HTMLAttributes } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLLabelElement> {
 	/**
-	 * Inner text
+	 * Renders an accessible label associated with controls.
 	 */
 	label?: string;
+
+	/**
+	 * The id of the element the label is associated with.
+	 */
+	htmlFor: string;
 }

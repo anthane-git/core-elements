@@ -10,4 +10,6 @@ export default {
 const Template: ComponentStory<typeof Text> = args => <Text {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+	text: 'Form text field',
+};

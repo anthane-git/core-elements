@@ -10,4 +10,7 @@ export default {
 const Template: ComponentStory<typeof Label> = args => <Label {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+	label: 'Label Text',
+	htmlFor: 'form-id',
+};
