@@ -1,6 +1,6 @@
 {
 	"name": "@anthane/core-elements",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Elements is the component library of the Core design system.",
 	"type": "module",
 	"publishConfig": {
@@ -14,7 +14,7 @@
 	],
 	"scripts": {
 		"start": "start-storybook -p 3100",
-		"prebuild": "./node_modules/rimraf/bin.js dist && mkdir dist && echo '*\n!.gitignore' > dist/.gitignore",
+		"prebuild": "./node_modules/rimraf/bin.js dist",
 		"build": "rollup -c",
 		"build:storybook": "build-storybook -o public",
 		"test": "jest",
