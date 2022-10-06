@@ -1,20 +1,25 @@
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
 	/**
-	 * Button form type
+	 * Form of the button appearance
 	 */
-	type: 'contained' | 'outlined' | 'icon' | 'text';
+	type: 'contained' | 'outlined' | 'text';
 
 	/**
-	 * Button style variant
+	 * Action style variants
 	 */
-	variant?: 'primary' | 'secondary';
+	variant?: 'primary' | 'secondary' | 'destructive';
 
 	/**
-	 * Button label
+	 * Button label text
 	 */
 	children?: string;
+
+	/**
+	 * Providing a React component will render as an icon
+	 */
+	icon?: ReactNode;
 
 	/**
 	 * Disables the Button, preventing mouse events,
