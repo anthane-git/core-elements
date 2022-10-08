@@ -9,6 +9,7 @@ describe('Test Label', () => {
 	beforeEach(() => {
 		props = {
 			className: 'label',
+			htmlFor: 'form',
 		};
 	});
 
