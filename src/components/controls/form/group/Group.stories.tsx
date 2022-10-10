@@ -12,4 +12,6 @@ const Template: ComponentStory<typeof Group> = args => <Group {...args} />;
 export const Text = Template.bind({});
 Text.args = {
 	type: 'text',
+	text: 'form text',
+	required: true,
 };

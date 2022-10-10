@@ -10,4 +10,11 @@ export interface Props extends HTMLAttributes<HTMLLabelElement> {
 	 * The id of the element the label is associated with.
 	 */
 	htmlFor: string;
+
+	/**
+	 * Specify whether this field is required
+	 *
+	 * @default false
+	 */
+	required?: boolean;
 }

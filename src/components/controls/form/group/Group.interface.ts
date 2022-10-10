@@ -17,11 +17,11 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	text?: string;
 
 	/**
-	 * Action style variants
+	 * Specify whether this field is required
 	 *
-	 * @default 'outlined'
+	 * @default false
 	 */
-	variant?: 'outline';
+	required?: boolean;
 
 	/**
 	 * Renders an accessible label associated with controls.

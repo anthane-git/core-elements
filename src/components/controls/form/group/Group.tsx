@@ -16,15 +16,20 @@ import styles from './Group.module.scss';
  * @see WAI-ARIA https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/input_role
  */
 export const Group = forwardRef<HTMLDivElement, Props>(
-	({ id, type = 'text', label = 'Input Label', text, ...props }) => {
+	({ id, required, type = 'text', label = 'Input Label', text, ...props }) => {
 		const [show, setShow] = useState(false);
 		const handleClick = () => setShow(!show);
 
 		return type === 'password' ? (
 			<div>
-				{label && <Label htmlFor="text-id" label={label} />}
+				{label && <Label htmlFor="text-id" label={label} required={required} />}
 				<div className={styles.group}>
-					<Input id={id} type={show ? 'text' : 'password'} {...props} />
+					<Input
+						id={id}
+						type={show ? 'text' : 'password'}
+						required={required}
+						{...props}
+					/>
 					<div className={styles.addon}>
 						<button onClick={handleClick}> {show ? 'Hide' : 'Show'}</button>
 					</div>
@@ -33,9 +38,11 @@ export const Group = forwardRef<HTMLDivElement, Props>(
 			</div>
 		) : (
 			<div>
-				{label && <Label htmlFor={id || 'text_id'} label={label} />}
+				{label && (
+					<Label htmlFor={id || 'text_id'} label={label} required={required} />
+				)}
 				<div className={styles.group}>
-					<Input id={'text_id'} type={type} {...props} />
+					<Input id={'text_id'} type={type} required={required} {...props} />
 				</div>
 				{text && <Text>{text}</Text>}
 			</div>

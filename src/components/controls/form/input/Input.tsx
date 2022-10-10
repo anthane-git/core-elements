@@ -12,10 +12,11 @@ import styles from './Input.module.scss';
  * @see WAI-ARIA https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/input_role
  */
 export const Input = forwardRef<HTMLInputElement, Props>(
-	({ id, type = 'text', ...props }) => (
+	({ id, required = false, type = 'text', ...props }) => (
 		<input
 			className={styles.input}
 			id={id || 'input_id'}
+			required={required}
 			type={type}
 			{...props}
 		/>

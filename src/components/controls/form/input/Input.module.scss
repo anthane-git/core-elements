@@ -1,5 +1,9 @@
 @import '~@anthane/core-tokens/dist/scss/index';
 
+* {
+	box-sizing: inherit;
+}
+
 .input {
 	@include core-text-body;
 	width: 100%;
@@ -20,7 +24,6 @@
 	background: inherit;
 	color: var(--core-color-text-default);
 	padding-inline-start: 1rem;
-	box-sizing: inherit;
 
 	&:focus-visible {
 		z-index: 1;
