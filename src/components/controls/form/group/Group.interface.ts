@@ -36,5 +36,5 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Action state style
 	 */
-	state?: 'error' | 'warning' | 'success';
+	state?: 'error' | 'warning' | 'success' | 'information';
 }

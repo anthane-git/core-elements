@@ -2,6 +2,21 @@
 
 .text {
 	@include core-text-body;
-	color: var(--core-color-text-default);
 	margin: 6px 0 0;
+
+	&.success {
+		color: var(--core-color-text-success);
+	}
+
+	&.information {
+		color: var(--core-color-text-information);
+	}
+
+	&.warning {
+		color: var(--core-color-text-warning);
+	}
+
+	&.error {
+		color: var(--core-color-text-error-default);
+	}
 }

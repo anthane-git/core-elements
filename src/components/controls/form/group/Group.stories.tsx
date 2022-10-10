@@ -9,9 +9,9 @@ export default {
 
 const Template: ComponentStory<typeof Group> = args => <Group {...args} />;
 
-export const Text = Template.bind({});
-Text.args = {
+export const Control = Template.bind({});
+Control.args = {
 	type: 'text',
-	text: 'form text',
+	text: '📖 Pleae read the instructions',
 	required: true,
 };

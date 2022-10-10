@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+
 import { Props } from './Text.interface';
 import styles from './Text.module.scss';
 
@@ -8,8 +10,12 @@ import styles from './Text.module.scss';
  * about the field, such as how it will be used and what
  * types in values should be provided.
  */
-export const Text = ({ children, ...props }: Props) => (
-	<p className={styles.text} {...props}>
-		{children}
-	</p>
+export const Text = forwardRef<HTMLInputElement, Props>(
+	({ children, state = 'information', ...props }: Props) => (
+		<p className={`${styles.text} ${styles[state]}`} {...props}>
+			{children}
+		</p>
+	)
 );
+
+Text.displayName = 'Text';

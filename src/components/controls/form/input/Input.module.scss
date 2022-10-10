@@ -16,7 +16,7 @@
 		opacity, box-shadow, transform;
 	transition-duration: 200ms;
 	height: 2.5rem;
-	border-radius: 0.375rem;
+	border-radius: 6px;
 	border-width: 1px;
 	border-style: solid;
 	border-image: initial;
@@ -29,5 +29,21 @@
 		z-index: 1;
 		border-color: var(--core-color-border-information-default);
 		box-shadow: var(--core-color-border-information-default) 0px 0px 0px 1px;
+	}
+
+	&.success {
+		border-color: var(--core-color-border-success-default);
+	}
+
+	&.information {
+		border-color: var(--core-color-border-information-default);
+	}
+
+	&.warning {
+		border-color: orange;
+	}
+
+	&.error {
+		border-color: var(--core-color-border-error-default);
 	}
 }

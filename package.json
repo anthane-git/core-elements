@@ -33,7 +33,7 @@
 	"homepage": "https://github.com/anthane-git/core-elements#readme",
 	"devDependencies": {
 		"@anthane/core-fonts": "^1.0.0",
-		"@anthane/core-tokens": "^1.0.9",
+		"@anthane/core-tokens": "^1.2.3",
 		"@babel/core": "^7.18.13",
 		"@babel/preset-react": "^7.18.6",
 		"@babel/preset-typescript": "^7.18.6",
