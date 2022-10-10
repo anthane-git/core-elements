@@ -1,5 +1,4 @@
 @import '~@anthane/core-tokens/dist/scss/index';
-@import '/src/styles/resets';
 
 .input {
 	@include core-text-body;
@@ -21,6 +20,7 @@
 	background: inherit;
 	color: var(--core-color-text-default);
 	padding-inline-start: 1rem;
+	box-sizing: inherit;
 
 	&:focus-visible {
 		z-index: 1;

@@ -1,4 +1,4 @@
-import { HTMLAttributes, HTMLInputTypeAttribute } from 'react';
+import { HTMLAttributes } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLInputElement> {
 	/**

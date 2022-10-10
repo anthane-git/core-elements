@@ -8,6 +8,8 @@ export interface Props extends HTMLAttributes<HTMLParagraphElement> {
 
 	/**
 	 * Action state style
+	 *
+	 * @default 'information'
 	 */
-	state: 'default' | 'success' | 'information' | 'warning' | 'error';
+	state?: 'success' | 'information' | 'warning' | 'error';
 }

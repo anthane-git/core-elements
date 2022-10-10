@@ -9,6 +9,7 @@ describe('Test Text', () => {
 	beforeEach(() => {
 		props = {
 			className: 'text',
+			children: 'children here',
 		};
 	});
 
