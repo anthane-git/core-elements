@@ -1,0 +1,30 @@
+@import '~@anthane/core-tokens/dist/scss/index';
+@import '/src/styles/resets';
+
+.input {
+	@include core-text-body;
+	width: 100%;
+	min-width: 0px;
+	outline: transparent solid 2px;
+	outline-offset: 2px;
+	position: relative;
+	appearance: none;
+	transition-property: background-color, border-color, color, fill, stroke,
+		opacity, box-shadow, transform;
+	transition-duration: 200ms;
+	height: 2.5rem;
+	border-radius: 0.375rem;
+	border-width: 1px;
+	border-style: solid;
+	border-image: initial;
+	border-color: inherit;
+	background: inherit;
+	color: var(--core-color-text-default);
+	padding-inline-start: 1rem;
+
+	&:focus-visible {
+		z-index: 1;
+		border-color: var(--core-color-border-information-default);
+		box-shadow: var(--core-color-border-information-default) 0px 0px 0px 1px;
+	}
+}

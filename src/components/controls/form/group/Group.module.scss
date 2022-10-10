@@ -1,0 +1,52 @@
+@import '~@anthane/core-tokens/dist/scss/index';
+
+.group {
+	width: 100%;
+	display: flex;
+	position: relative;
+
+	input {
+		padding-inline-start: 1rem;
+		padding-inline-end: 2.5rem;
+		padding-right: 4.5rem;
+	}
+
+	.addon {
+		right: 8px;
+		width: 4.5rem;
+		height: 2.5rem;
+		font-size: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 2px;
+		z-index: 2;
+
+		button {
+			display: inline-flex;
+			appearance: none;
+			align-items: center;
+			justify-content: center;
+			user-select: none;
+			position: relative;
+			white-space: nowrap;
+			vertical-align: middle;
+			outline: transparent solid 2px;
+			outline-offset: 2px;
+			line-height: 1.2;
+			border-radius: 0.375rem;
+			font-weight: 600;
+			transition-property: background-color, border-color, color, fill, stroke,
+				opacity, box-shadow, transform;
+			transition-duration: 200ms;
+			height: 1.75rem;
+			min-width: 2rem;
+			font-size: 0.875rem;
+			padding-inline-start: 0.75rem;
+			padding-inline-end: 0.75rem;
+			background: var(--core-color-action-secondary-default);
+			color: var(--core-color-icon-on-primary);
+		}
+	}
+}

@@ -8,6 +8,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 
 	/**
 	 * Action style variants
+	 *
 	 * @default 'primary'
 	 */
 	variant?: 'primary' | 'secondary' | 'destructive';
@@ -19,12 +20,14 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 
 	/**
 	 * The html button type to use.
+	 *
 	 * @default 'Button'
 	 */
 	as?: 'button' | 'reset' | 'submit';
 
 	/**
 	 * Providing a React component will render as an icon
+	 *
 	 * @type ReactNode
 	 */
 	icon?: ReactNode;

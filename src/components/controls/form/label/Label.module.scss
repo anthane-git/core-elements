@@ -1,3 +1,9 @@
+@import '~@anthane/core-tokens/dist/scss/index';
+
 .label {
-	content: '';
+	@include core-text-overline;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 6px;
+	color: var(--core-color-text-default);
 }

@@ -1,3 +1,8 @@
+@import '~@anthane/core-tokens/dist/scss/index';
+@import '/src/styles/resets';
+
 .text {
-	content: '';
+	@include core-text-body;
+	color: var(--core-color-text-default);
+	margin-top: 6px;
 }

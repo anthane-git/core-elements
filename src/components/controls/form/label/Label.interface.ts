@@ -4,7 +4,7 @@ export interface Props extends HTMLAttributes<HTMLLabelElement> {
 	/**
 	 * Renders an accessible label associated with controls.
 	 */
-	label?: string;
+	label: string;
 
 	/**
 	 * The id of the element the label is associated with.

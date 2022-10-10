@@ -4,7 +4,7 @@ import { Props } from './Button.props';
 import styles from './Button.module.scss';
 
 /**
- * Button with variant combinations
+ * Button Component
  *
  * Button component is used to trigger an action or event,
  * such as submitting a form, opening a Dialog, canceling an action,
