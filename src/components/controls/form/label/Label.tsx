@@ -11,8 +11,8 @@ import styles from './Label.module.scss';
  * The usage is similar to html label.
  */
 export const Label = forwardRef<HTMLInputElement, Props>(
-	({ label, required, ...props }: Props) => (
-		<Element.Root className={styles.label} {...props}>
+	({ label, required, ...props }: Props, ref) => (
+		<Element.Root className={styles.label} ref={ref} {...props}>
 			{label}
 			{required && <span>*</span>}
 		</Element.Root>

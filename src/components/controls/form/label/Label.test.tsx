@@ -10,6 +10,7 @@ describe('Test Label', () => {
 		props = {
 			className: 'label',
 			htmlFor: 'form',
+			label: 'input label',
 		};
 	});
 

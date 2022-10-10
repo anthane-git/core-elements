@@ -11,8 +11,8 @@ import styles from './Text.module.scss';
  * types in values should be provided.
  */
 export const Text = forwardRef<HTMLInputElement, Props>(
-	({ children, state = 'information', ...props }: Props) => (
-		<p className={`${styles.text} ${styles[state]}`} {...props}>
+	({ children, state = 'information', ...props }: Props, ref) => (
+		<p className={`${styles.text} ${styles[state]}`} ref={ref} {...props}>
 			{children}
 		</p>
 	)

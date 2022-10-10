@@ -16,20 +16,23 @@ import styles from './Group.module.scss';
  * @see WAI-ARIA https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/input_role
  */
 export const Group = forwardRef<HTMLDivElement, Props>(
-	({
-		id,
-		type = 'text',
-		label = 'Input Label',
-		required,
-		state,
-		text,
-		...props
-	}) => {
+	(
+		{
+			id,
+			type = 'text',
+			label = 'Input Label',
+			required,
+			state,
+			text,
+			...props
+		},
+		ref
+	) => {
 		const [show, setShow] = useState(false);
 		const handleClick = () => setShow(!show);
 
 		return type === 'password' ? (
-			<div>
+			<div ref={ref}>
 				{label && <Label htmlFor="text-id" label={label} required={required} />}
 				<div className={styles.group}>
 					<Input

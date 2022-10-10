@@ -8,7 +8,7 @@ describe('Test Input', () => {
 
 	beforeEach(() => {
 		props = {
-			className: 'control',
+			className: 'input',
 			type: 'password',
 		};
 	});
