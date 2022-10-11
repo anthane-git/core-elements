@@ -8,14 +8,14 @@ describe('Test Group', () => {
 
 	beforeEach(() => {
 		props = {
-			className: 'control',
+			className: 'group',
 			type: 'password',
 		};
 	});
 
 	const renderComponent = () => render(<Group {...props} />);
 
-	it('should have input className', () => {
+	it('should have group className', () => {
 		const { container } = renderComponent();
 
 		expect(container.getElementsByClassName('group').length).toBe(1);
