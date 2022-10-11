@@ -23,6 +23,7 @@ export const Group = ({
 	state,
 	fluid,
 	text,
+	ref,
 	...props
 }: Props) => {
 	const [show, setShow] = useState(false);
@@ -37,6 +38,7 @@ export const Group = ({
 					required={required}
 					state={state}
 					fluid={fluid}
+					ref={ref}
 					id={id}
 					{...props}
 				/>
@@ -57,6 +59,7 @@ export const Group = ({
 					state={state}
 					fluid={fluid}
 					type={type}
+					ref={ref}
 					id={id}
 					{...props}
 				/>
