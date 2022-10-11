@@ -18,7 +18,7 @@ import styles from './Group.module.scss';
 export const Group = forwardRef<HTMLInputElement, Props>(
 	(
 		{
-			id,
+			id = Date.now().toString(),
 			type = 'text',
 			label = 'Input Label',
 			required,
@@ -53,9 +53,7 @@ export const Group = forwardRef<HTMLInputElement, Props>(
 			</>
 		) : (
 			<>
-				{label && (
-					<Label htmlFor={id || 'text_id'} label={label} required={required} />
-				)}
+				{label && <Label htmlFor={id} label={label} required={required} />}
 				<div className={styles.group}>
 					<Input
 						required={required}

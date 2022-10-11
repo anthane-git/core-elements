@@ -29,3 +29,10 @@ Email.args = {
 	disable: false,
 	fluid: false,
 };
+
+export const Submit = Template.bind({});
+Submit.args = {
+	type: 'submit',
+	disable: false,
+	fluid: false,
+};

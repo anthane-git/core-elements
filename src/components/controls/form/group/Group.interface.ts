@@ -1,13 +1,15 @@
-import { HTMLAttributes, Ref } from 'react';
+import { HTMLAttributes } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Form of the button appearance
 	 */
-	type: 'text' | 'password' | 'email';
+	type: 'text' | 'password' | 'email' | 'submit';
 
 	/**
-	 * ID key
+	 * Input ID
+	 *
+	 * @default Date.now().toString()
 	 */
 	id?: string;
 

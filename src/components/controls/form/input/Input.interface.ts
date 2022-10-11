@@ -6,7 +6,7 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	 *
 	 * @default 'text'
 	 */
-	type: 'text' | 'password' | 'email';
+	type: 'text' | 'password' | 'email' | 'submit';
 
 	/**
 	 * ID key

@@ -5,25 +5,62 @@
 }
 
 .input {
-	@include core-text-body;
-	min-width: 0px;
-	outline: transparent solid 2px;
-	outline-offset: 2px;
-	position: relative;
-	appearance: none;
+	width: auto;
 	transition-property: background-color, border-color, color, fill, stroke,
 		opacity, box-shadow, transform;
 	transition-duration: 200ms;
-	height: 2.5rem;
-	border-radius: 6px;
-	border-width: 1px;
-	border-style: solid;
-	border-image: initial;
-	border-color: inherit;
-	background: inherit;
-	color: var(--core-color-text-default);
-	padding-inline-start: 1rem;
-	width: auto;
+
+	&.text,
+	&.password,
+	&.email {
+		@include core-text-body;
+		min-width: 0px;
+		outline: transparent solid 2px;
+		outline-offset: 2px;
+		position: relative;
+		height: 2.5rem;
+		border-radius: 6px;
+		border-width: 1px;
+		border-style: solid;
+		border-image: initial;
+		border-color: inherit;
+		background: inherit;
+		color: var(--core-color-text-default);
+		padding-inline-start: 1rem;
+	}
+
+	&.password {
+		content: '';
+	}
+
+	&.email {
+		content: '';
+	}
+
+	&.submit {
+		@include core-text-button;
+		border: 0;
+		border-radius: 3em;
+		cursor: pointer;
+		padding: 10.5px 20px;
+		border-radius: 4px;
+		user-select: none;
+		color: var(--core-color-text-default);
+		background-color: var(--core-color-action-primary-default);
+
+		&.disabled {
+			background-color: var(--core-color-action-primary-disabled);
+			opacity: 50%;
+		}
+
+		&:hover {
+			background: var(--core-color-action-primary-hovered);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 0.1rem var(--core-color-action-on-interactive);
+		}
+	}
 
 	&:focus-visible {
 		z-index: 1;
