@@ -1,14 +1,19 @@
-import { Props } from './Form.props';
 import { Group } from './group';
 import { Label } from './label';
 import { Text } from './text';
 import { Input } from './input';
 
-export const Form = ({ children }: Props) => <form>{children}</form>;
-
-export default Object.assign(Form, {
+/**
+ * Form Component
+ *
+ * A wrapper component that handles inputs,
+ * and submission of forms.
+ *
+ * @see Docs https://anthane-git.github.io/core/elements/form
+ */
+export default {
 	Group,
 	Input,
 	Label,
 	Text,
-});
+};

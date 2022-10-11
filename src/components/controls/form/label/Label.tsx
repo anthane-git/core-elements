@@ -8,7 +8,7 @@ import styles from './Label.module.scss';
  * Form Label
  *
  * The label of a form input,
- * The usage is similar to html label.
+ * usage is similar to html label.
  */
 export const Label = forwardRef<HTMLInputElement, Props>(
 	({ label, required, ...props }: Props, ref) => (

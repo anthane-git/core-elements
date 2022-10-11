@@ -4,7 +4,7 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Form of the button appearance
 	 */
-	type: 'text' | 'password' | 'email' | 'submit';
+	type: 'text' | 'password' | 'email';
 
 	/**
 	 * Input ID
