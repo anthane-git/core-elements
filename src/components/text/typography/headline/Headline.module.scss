@@ -1,27 +1,29 @@
 @import '~@anthane/core-tokens/dist/scss/index';
 
 .headline {
+	color: var(--core-color-text-default);
+
 	&.XXLarge {
-		font-size: 96px;
+		@include core-text-headline-xxl;
 	}
 
 	&.XLarge {
-		font-size: 86px;
+		@include core-text-headline-xl;
 	}
 
 	&.Large {
-		font-size: 76px;
+		@include core-text-headline-lg;
 	}
 
 	&.Medium {
-		font-size: 66px;
+		@include core-text-headline-md;
 	}
 
 	&.Small {
-		font-size: 56px;
+		@include core-text-headline-sm;
 	}
 
 	&.XSmall {
-		font-size: 46px;
+		@include core-text-headline-xs;
 	}
 }

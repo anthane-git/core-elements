@@ -12,7 +12,7 @@ import styles from './Headline.module.scss';
  * @see Docs https://anthane-git.github.io/core/elements/typography/headline
  */
 export const Headline = forwardRef<HTMLHeadingElement, Props>(
-	({ size, children, ...props }, ref) => (
+	({ size = 'Medium', children, ...props }, ref) => (
 		<h1 className={`${styles.headline} ${styles[size]}`} ref={ref} {...props}>
 			{children}
 		</h1>

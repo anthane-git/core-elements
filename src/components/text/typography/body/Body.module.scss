@@ -1,5 +1,6 @@
 @import '~@anthane/core-tokens/dist/scss/index';
 
 .body {
-	font-size: 15px;
+	color: var(--core-color-text-default);
+	@include core-text-body;
 }

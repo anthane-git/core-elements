@@ -13,4 +13,5 @@ export const ComponentHeadline = Story.bind({});
 ComponentHeadline.storyName = 'Headline';
 ComponentHeadline.args = {
 	children: 'The quick brown fox jumps over the lazy dog',
+	size: 'Medium',
 };
