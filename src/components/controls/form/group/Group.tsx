@@ -29,7 +29,7 @@ export const Group = ({
 	const handleClick = () => setShow(!show);
 
 	return type === 'password' ? (
-		<div>
+		<>
 			{label && <Label htmlFor="text_id" label={label} required={required} />}
 			<div className={styles.group}>
 				<Input
@@ -45,9 +45,9 @@ export const Group = ({
 				</div>
 			</div>
 			{text && <Text state={state}>{text}</Text>}
-		</div>
+		</>
 	) : (
-		<div {...props}>
+		<>
 			{label && (
 				<Label htmlFor={id || 'text_id'} label={label} required={required} />
 			)}
@@ -62,6 +62,6 @@ export const Group = ({
 				/>
 			</div>
 			{text && <Text state={state}>{text}</Text>}
-		</div>
+		</>
 	);
 };

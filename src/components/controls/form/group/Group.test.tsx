@@ -18,6 +18,6 @@ describe('Test Group', () => {
 	it('should have group className', () => {
 		const { container } = renderComponent();
 
-		expect(container.getElementsByClassName('group').length).toBe(1);
+		expect(container.getElementsByClassName('group').length).toBe(2);
 	});
 });
