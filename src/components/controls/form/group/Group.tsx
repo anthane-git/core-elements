@@ -23,7 +23,6 @@ export const Group = ({
 	state,
 	fluid,
 	text,
-	ref,
 	...props
 }: Props) => {
 	const [show, setShow] = useState(false);
@@ -32,14 +31,14 @@ export const Group = ({
 	return type === 'password' ? (
 		<div>
 			{label && <Label htmlFor="text_id" label={label} required={required} />}
-			<div className={styles.group} {...props}>
+			<div className={styles.group}>
 				<Input
 					type={show ? 'text' : 'password'}
 					required={required}
 					state={state}
 					fluid={fluid}
-					ref={ref}
 					id={id}
+					{...props}
 				/>
 				<div className={styles.addon}>
 					<button onClick={handleClick}> {show ? 'Hide' : 'Show'}</button>
@@ -58,8 +57,8 @@ export const Group = ({
 					state={state}
 					fluid={fluid}
 					type={type}
-					ref={ref}
 					id={id}
+					{...props}
 				/>
 			</div>
 			{text && <Text state={state}>{text}</Text>}
