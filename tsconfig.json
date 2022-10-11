@@ -15,8 +15,7 @@
 		"skipLibCheck": true,
 		"plugins": [{ "name": "typescript-plugin-css-modules" }],
 		"paths": {
-			"@components": ["./components"],
-			"*": ["./utils/*"]
+			"@components": ["./components"]
 		}
 	},
 	"include": ["src/**/*"]

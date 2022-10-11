@@ -12,14 +12,20 @@ const Template: ComponentStory<typeof Input> = args => <Input {...args} />;
 export const Text = Template.bind({});
 Text.args = {
 	type: 'text',
+	disable: false,
+	fluid: false,
 };
 
 export const Password = Template.bind({});
 Password.args = {
 	type: 'password',
+	disable: false,
+	fluid: false,
 };
 
 export const Email = Template.bind({});
 Email.args = {
 	type: 'email',
+	disable: false,
+	fluid: false,
 };

@@ -24,6 +24,14 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	required?: boolean;
 
 	/**
+	 * For a full width input,
+	 * spanning the entire width of parent.
+	 *
+	 * @default false
+	 */
+	fluid?: boolean;
+
+	/**
 	 * Renders an accessible label associated with controls.
 	 */
 	label?: string;

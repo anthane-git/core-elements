@@ -13,11 +13,21 @@ import styles from './Input.module.scss';
  */
 export const Input = forwardRef<HTMLInputElement, Props>(
 	(
-		{ id, required = false, type = 'text', state = 'information', ...props },
+		{
+			id,
+			state = 'information',
+			required = false,
+			disable = false,
+			type = 'text',
+			fluid = false,
+			...props
+		},
 		ref
 	) => (
 		<input
-			className={`${styles.input} ${styles[state]}`}
+			className={`${styles.input} ${styles[state]} ${fluid && styles.fluid} ${
+				disable && styles.disable
+			}`}
 			id={id || 'input_id'}
 			required={required}
 			type={type}

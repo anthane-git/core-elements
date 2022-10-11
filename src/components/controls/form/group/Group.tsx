@@ -23,6 +23,7 @@ export const Group = forwardRef<HTMLDivElement, Props>(
 			label = 'Input Label',
 			required,
 			state,
+			fluid,
 			text,
 			...props
 		},
@@ -34,13 +35,13 @@ export const Group = forwardRef<HTMLDivElement, Props>(
 		return type === 'password' ? (
 			<div ref={ref}>
 				{label && <Label htmlFor="text-id" label={label} required={required} />}
-				<div className={styles.group}>
+				<div className={styles.group} {...props}>
 					<Input
-						id={id}
 						type={show ? 'text' : 'password'}
 						required={required}
 						state={state}
-						{...props}
+						fluid={fluid}
+						id={id}
 					/>
 					<div className={styles.addon}>
 						<button onClick={handleClick}> {show ? 'Hide' : 'Show'}</button>
@@ -49,17 +50,17 @@ export const Group = forwardRef<HTMLDivElement, Props>(
 				{text && <Text state={state}>{text}</Text>}
 			</div>
 		) : (
-			<div>
+			<div {...props}>
 				{label && (
 					<Label htmlFor={id || 'text_id'} label={label} required={required} />
 				)}
 				<div className={styles.group}>
 					<Input
-						id={'text_id'}
-						type={type}
 						required={required}
+						id={'text_id'}
 						state={state}
-						{...props}
+						fluid={fluid}
+						type={type}
 					/>
 				</div>
 				{text && <Text state={state}>{text}</Text>}

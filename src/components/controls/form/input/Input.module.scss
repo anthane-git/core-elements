@@ -6,7 +6,6 @@
 
 .input {
 	@include core-text-body;
-	width: 100%;
 	min-width: 0px;
 	outline: transparent solid 2px;
 	outline-offset: 2px;
@@ -24,11 +23,20 @@
 	background: inherit;
 	color: var(--core-color-text-default);
 	padding-inline-start: 1rem;
+	width: auto;
 
 	&:focus-visible {
 		z-index: 1;
 		border-color: var(--core-color-border-information-default);
 		box-shadow: var(--core-color-border-information-default) 0px 0px 0px 1px;
+	}
+
+	&.fluid {
+		width: 100%;
+	}
+
+	&.disable {
+		opacity: 50%;
 	}
 
 	&.success {

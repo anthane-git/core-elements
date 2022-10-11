@@ -26,9 +26,19 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	label?: string;
 
 	/**
-	 * Disables the input, preventing mouse events
+	 * For a full width input,
+	 * spanning the entire width of parent.
+	 *
+	 * @default false
 	 */
-	active?: boolean;
+	fluid?: boolean;
+
+	/**
+	 * Disables the input, preventing mouse events
+	 *
+	 * @default false
+	 */
+	disable?: boolean;
 
 	/**
 	 * Action state style
