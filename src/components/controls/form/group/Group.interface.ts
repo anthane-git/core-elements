@@ -24,11 +24,6 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	required?: boolean;
 
 	/**
-	 * React ref for HTMLInputElement
-	 */
-	ref?: Ref<HTMLInputElement>;
-
-	/**
 	 * For a full width input,
 	 * spanning the entire width of parent.
 	 *
