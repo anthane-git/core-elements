@@ -1,6 +1,6 @@
 {
 	"name": "@anthane/core-elements",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"description": "Elements is the component library of the Core design system.",
 	"type": "module",
 	"publishConfig": {

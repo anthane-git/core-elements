@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { useState } from 'react';
 
 import { Input } from '../input';
 import { Label } from '../label';
@@ -15,58 +15,54 @@ import styles from './Group.module.scss';
  * @see Docs https://anthane-git.github.io/core/elements/form/control
  * @see WAI-ARIA https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/input_role
  */
-export const Group = forwardRef<HTMLDivElement, Props>(
-	(
-		{
-			id,
-			type = 'text',
-			label = 'Input Label',
-			required,
-			state,
-			fluid,
-			text,
-			...props
-		},
-		ref
-	) => {
-		const [show, setShow] = useState(false);
-		const handleClick = () => setShow(!show);
+export const Group = ({
+	id,
+	type = 'text',
+	label = 'Input Label',
+	required,
+	state,
+	fluid,
+	text,
+	ref,
+	...props
+}: Props) => {
+	const [show, setShow] = useState(false);
+	const handleClick = () => setShow(!show);
 
-		return type === 'password' ? (
-			<div ref={ref}>
-				{label && <Label htmlFor="text-id" label={label} required={required} />}
-				<div className={styles.group} {...props}>
-					<Input
-						type={show ? 'text' : 'password'}
-						required={required}
-						state={state}
-						fluid={fluid}
-						id={id}
-					/>
-					<div className={styles.addon}>
-						<button onClick={handleClick}> {show ? 'Hide' : 'Show'}</button>
-					</div>
+	return type === 'password' ? (
+		<div>
+			{label && <Label htmlFor="text_id" label={label} required={required} />}
+			<div className={styles.group} {...props}>
+				<Input
+					type={show ? 'text' : 'password'}
+					required={required}
+					state={state}
+					fluid={fluid}
+					ref={ref}
+					id={id}
+				/>
+				<div className={styles.addon}>
+					<button onClick={handleClick}> {show ? 'Hide' : 'Show'}</button>
 				</div>
-				{text && <Text state={state}>{text}</Text>}
 			</div>
-		) : (
-			<div {...props}>
-				{label && (
-					<Label htmlFor={id || 'text_id'} label={label} required={required} />
-				)}
-				<div className={styles.group}>
-					<Input
-						required={required}
-						state={state}
-						fluid={fluid}
-						type={type}
-						id={id}
-					/>
-				</div>
-				{text && <Text state={state}>{text}</Text>}
+			{text && <Text state={state}>{text}</Text>}
+		</div>
+	) : (
+		<div {...props}>
+			{label && (
+				<Label htmlFor={id || 'text_id'} label={label} required={required} />
+			)}
+			<div className={styles.group}>
+				<Input
+					required={required}
+					state={state}
+					fluid={fluid}
+					type={type}
+					ref={ref}
+					id={id}
+				/>
 			</div>
-		);
-	}
-);
-
-Group.displayName = 'Group';
+			{text && <Text state={state}>{text}</Text>}
+		</div>
+	);
+};

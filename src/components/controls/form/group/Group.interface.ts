@@ -1,4 +1,4 @@
-import { HTMLAttributes, HTMLInputTypeAttribute } from 'react';
+import { HTMLAttributes, Ref } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLInputElement> {
 	/**
@@ -22,6 +22,11 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	 * @default false
 	 */
 	required?: boolean;
+
+	/**
+	 * React ref for HTMLInputElement
+	 */
+	ref?: Ref<HTMLInputElement>;
 
 	/**
 	 * For a full width input,
