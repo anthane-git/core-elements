@@ -57,10 +57,10 @@ export const Group = forwardRef<HTMLDivElement, Props>(
 				<div className={styles.group}>
 					<Input
 						required={required}
-						id={'text_id'}
 						state={state}
 						fluid={fluid}
 						type={type}
+						id={id}
 					/>
 				</div>
 				{text && <Text state={state}>{text}</Text>}
