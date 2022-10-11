@@ -37,7 +37,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 	 * even if the underlying component is an `<a>` element
 	 * Manually set the visual state of the button to active
 	 */
-	active?: boolean;
+	disable?: boolean;
 
 	/**
 	 * Disables the Button, preventing mouse events,

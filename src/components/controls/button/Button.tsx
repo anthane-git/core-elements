@@ -18,8 +18,8 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 		{
 			variant = 'primary',
 			as = 'button',
+			disable = false,
 			children,
-			active,
 			type,
 			icon,
 			...props
@@ -30,7 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 			ref={ref}
 			type={as}
 			className={`${styles.button} ${styles[type]} ${styles[variant]} ${
-				!active && styles.disabled
+				disable && styles.disabled
 			} ${icon && styles.icon}`}
 			{...props}
 		>
