@@ -19,8 +19,9 @@ export const Group = forwardRef<HTMLInputElement, Props>(
 	(
 		{
 			id = Date.now().toString(),
-			type = 'text',
 			label = 'Input Label',
+			type = 'text',
+			className,
 			required,
 			state,
 			fluid,
@@ -33,7 +34,7 @@ export const Group = forwardRef<HTMLInputElement, Props>(
 		const handleClick = () => setShow(!show);
 
 		return type === 'password' ? (
-			<>
+			<div className={className}>
 				{label && <Label htmlFor="text_id" label={label} required={required} />}
 				<div className={styles.group}>
 					<Input
@@ -50,9 +51,9 @@ export const Group = forwardRef<HTMLInputElement, Props>(
 					</div>
 				</div>
 				{text && <Text state={state}>{text}</Text>}
-			</>
+			</div>
 		) : (
-			<>
+			<div className={className}>
 				{label && <Label htmlFor={id} label={label} required={required} />}
 				<div className={styles.group}>
 					<Input
@@ -66,7 +67,7 @@ export const Group = forwardRef<HTMLInputElement, Props>(
 					/>
 				</div>
 				{text && <Text state={state}>{text}</Text>}
-			</>
+			</div>
 		);
 	}
 );

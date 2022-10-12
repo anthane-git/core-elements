@@ -14,6 +14,12 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	id?: string;
 
 	/**
+	 * The className attribute specifies,
+	 * class names for an element
+	 */
+	className?: string;
+
+	/**
 	 * Renders text.
 	 */
 	text?: string;
